@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.crystrom.spotsoontask.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35">
+
+        <RelativeLayout
+            android:id="@+id/track_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/track_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000" />
+
+
+            <ImageButton
+                android:id="@+id/play_pause_btn"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#00FFFFFF"
+                android:paddingBottom="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/play"
+
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignTop="@id/play_pause_btn"
+                android:layout_toRightOf="@id/play_pause_btn"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/track_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viewPagerTextColor"
+                    tools:text="@string/track_name" />
+
+                <TextView
+                    android:id="@+id/track_name_sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viewPagerTextColorSubtle"
+                    tools:text="@string/track_name_sub" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/circular_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/first_image_indicator"
+                style="@style/circular_indicator_circles"
+                android:src="@drawable/circle_hollow" />
+
+            <ImageView
+                android:id="@+id/second_image_indicator"
+                style="@style/circular_indicator_circles"
+                android:src="@drawable/circle_hollow" />
+
+            <ImageView
+                android:id="@+id/third_image_indicator"
+                style="@style/circular_indicator_circles"
+                android:src="@drawable/circle_hollow" />
+
+            <ImageView
+                android:id="@+id/fourth_image_indicator"
+                style="@style/circular_indicator_circles"
+                android:src="@drawable/circle_hollow" />
+
+            <ImageView
+                android:id="@+id/fifth_image_indicator"
+                style="@style/circular_indicator_circles"
+                android:src="@drawable/circle_hollow" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/content_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.65"
+        android:visibility="visible">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/viewpager_tab"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#ffffff"
+            android:elevation="6dp">
+
+
+        </android.support.design.widget.TabLayout>
+
+
+    </android.support.v4.view.ViewPager>
+
+
+</LinearLayout>
